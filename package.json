@@ -1,8 +1,8 @@
 {
-  "name": "nft-marketplace",
+  "name": "flowz-nft",
   "version": "0.1.0",
-  "description": "An NFT Marketplace",
-  "author": "clarionnorth@gmail.com",
+  "description": "flowers and nft",
+  "author": "mawglih@gmail.com",
   "dependencies": {
     "@metamask/detect-provider": "^1.2.0",
     "@openzeppelin/contracts": "^4.3.1",

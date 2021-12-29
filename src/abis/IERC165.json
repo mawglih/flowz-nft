@@ -30,7 +30,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ninterface IERC165 {\r\n    /// @notice Query if a contract implements an interface\r\n    /// @param interfaceID The interface identifier, as specified in ERC-165\r\n    /// @dev Interface identification is specified in ERC-165. This function\r\n    ///  uses less than 30,000 gas.\r\n    /// @return `true` if the contract implements `interfaceID` and\r\n    ///  `interfaceID` is not 0xffffffff, `false` otherwise\r\n    function supportsInterface(bytes4 interfaceID) external view returns (bool);\r\n}\r\n",
-  "sourcePath": "C:\\Users\\oliva\\code-local\\nft-marketplace-starter-kit\\src\\contracts\\interfaces\\IERC165.sol",
+  "sourcePath": "C:\\Users\\oliva\\code-local\\flowz-nft\\src\\contracts\\interfaces\\IERC165.sol",
   "ast": {
     "absolutePath": "project:/src/contracts/interfaces/IERC165.sol",
     "exportedSymbols": {
@@ -305,7 +305,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-28T13:24:12.904Z",
+  "updatedAt": "2021-12-28T15:47:52.170Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

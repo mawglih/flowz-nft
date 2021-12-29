@@ -6,9 +6,11 @@ require('chai')
 
 contract('KryptoFlow', (accounts) => {
     let contract;
+    before(async () => {
+        contract = await KryptoFlow.deployed();
+    });
     describe('deployment', async () => {
         it('deploys succesfully', async () => {
-            contract = await KryptoFlow.deployed();
             const address = contract.address;
             assert.notEqual(address, '');
             assert.notEqual(address, null);
@@ -22,6 +24,36 @@ contract('KryptoFlow', (accounts) => {
             it('has a symbol', async () => {
             const symbol = await contract.symbol();
             assert.equal(symbol, 'KPFLWS');
+        });
+    });
+
+    describe('minting', async () => {
+        it('creates new token', async () => {
+            const result = await contract.mint('htpps...1');
+            const totalSupply = await contract.totalSupply();
+            assert.equal(totalSupply, 1, 'it is total supply');
+            const event = result.logs[0].args;
+            assert.equal(event._from, 0, 'sending token from');
+            assert.equal(event._to, accounts[0], 'to is msg.sender');
+            await contract.mint('htpps...1').should.be.rejected;
+        });
+    });
+
+    
+    describe('indexing', async ()=> {
+        it('lists KryptoFlowz', async() => {
+            // Mint three new tokens
+            await contract.mint('https...2');
+            await contract.mint('https...3');
+            await contract.mint('https...4');
+            const totalSupply = await contract.totalSupply();
+            // Loop through list and grab KBirdz from list
+            let result = [];
+            let cryptoFlow;
+            for(i = 1; i <= totalSupply; i++) {
+                cryptoFlow = await contract.KryptoFlowz(i - 1);
+                result.push(cryptoFlow);
+            }
         });
     });
 });

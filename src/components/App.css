@@ -1,0 +1,9 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: aliceblue;
+  height: 2rem;
+  padding: 0.5rem;
+}

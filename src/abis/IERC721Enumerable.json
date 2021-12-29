@@ -67,7 +67,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ninterface IERC721Enumerable {\r\n    /// @notice Count NFTs tracked by this contract\r\n    /// @return A count of valid NFTs tracked by this contract, where each one of\r\n    ///  them has an assigned and queryable owner not equal to the zero address\r\n    function totalSupply() external view returns (uint256);\r\n\r\n    /// @notice Enumerate valid NFTs\r\n    /// @dev Throws if `_index` >= `totalSupply()`.\r\n    /// @param _index A counter less than `totalSupply()`\r\n    /// @return The token identifier for the `_index`th NFT,\r\n    ///  (sort order not specified)\r\n    function tokenByIndex(uint256 _index) external view returns (uint256);\r\n\r\n    /// @notice Enumerate NFTs assigned to an owner\r\n    /// @dev Throws if `_index` >= `balanceOf(_owner)` or if\r\n    ///  `_owner` is the zero address, representing invalid NFTs.\r\n    /// @param _owner An address where we are interested in NFTs owned by them\r\n    /// @param _index A counter less than `balanceOf(_owner)`\r\n    /// @return The token identifier for the `_index`th NFT assigned to `_owner`,\r\n    ///   (sort order not specified)\r\n    function tokenOfOwnerByIndex(address _owner, uint256 _index)\r\n        external\r\n        view\r\n        returns (uint256);\r\n}\r\n",
-  "sourcePath": "C:\\Users\\oliva\\code-local\\nft-marketplace-starter-kit\\src\\contracts\\interfaces\\IERC721Enumerable.sol",
+  "sourcePath": "C:\\Users\\oliva\\code-local\\flowz-nft\\src\\contracts\\interfaces\\IERC721Enumerable.sol",
   "ast": {
     "absolutePath": "project:/src/contracts/interfaces/IERC721Enumerable.sol",
     "exportedSymbols": {
@@ -698,7 +698,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-28T13:24:12.910Z",
+  "updatedAt": "2021-12-28T15:47:52.173Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

@@ -41,8 +41,8 @@ export default function Web3Provider({children}) {
             connect: provider ?
                 async () => {
                     try {
-                        await provider.request({ method: "eth_requestAccounts" });
-                        console.log('clicked')
+                        const res = await provider.request({ method: "eth_requestAccounts" });
+                        console.log('clicked', res)
                     } catch {
                         console.error("cannot retrieve account");
                         window.location.reload();

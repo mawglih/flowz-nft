@@ -3,14 +3,17 @@ import { Web3Provider } from '../../providers';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
-export default({ children}) => (
-    <Web3Provider>
-        <div>
-            <NavBar title="Flowers NFT"/>
+const Layout = ({ children}) => {
+    return (
+        <Web3Provider>
             <div>
-                {children}
+                <NavBar title="Flowers NFT"/>
+                <div>
+                    {children}
+                </div>
             </div>
-        </div>
-        <Footer/>
-    </Web3Provider>
-)
+            <Footer/>
+        </Web3Provider>
+    )
+}
+export default Layout;

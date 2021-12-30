@@ -8,6 +8,7 @@ const NavBar = ({
 }) => {
     const { connect, isLoading, isWeb3Loaded} = useWeb3();
     const { account } = useAccount();
+    console.log(account)
     return (
         <div className="navbar-container">
             <div className="navbar-title">{title}</div>
